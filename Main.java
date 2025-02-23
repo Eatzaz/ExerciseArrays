@@ -41,13 +41,15 @@ public class Main {
 
 //4.Write a Java program to swap the first and last elements of an array and
 //create a new array.
-        ArrayList numbersSwap=new ArrayList();
-        numbersSwap.add(20);
-        numbersSwap.add(30);
-        numbersSwap.add(40);
-      numbersSwap.set(0,40);
-      numbersSwap.set(2,20);
-        System.out.println("New array after swapping the first and last elements:"+numbersSwap);
+        int [] num={10,2,3,4,6,1,6,9};
+       ArrayList<Integer> news=new ArrayList<Integer>();
+        for(int i:num){
+            news.add(i);
+        }
+        int s=news.set(0, news.getLast());
+        news.set(0, news.getFirst());
+        news.set(7,s);
+        System.out.println(news);
         //5. Write a program that places the odd elements of an array before the
         //even elements.
         int[] OriginalArray={2,3,40,1,5,9,4,10,7};
